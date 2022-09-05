@@ -4,9 +4,9 @@
 // M = 4; N = 8. -> 30
 
 Console.Write("Введите число M: ");
-int NumberM=Convert.ToInt32(Console.ReadLine());
+int NumberM = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число N: ");
-int NumberN=Convert.ToInt32(Console.ReadLine());
+int NumberN = Convert.ToInt32(Console.ReadLine());
 
 if (NumberM > NumberN)
 {
@@ -14,14 +14,14 @@ if (NumberM > NumberN)
 }
 else
 {
-int res=GetSumNutElementsMToN(NumberM,NumberN);
-Console.WriteLine("Сумма натуральных элементов в промежутке от "+ NumberM + " до " + NumberN + " равна " + res);
+    int res = GetSumNutElementsMToN(NumberM, NumberN);
+    Console.WriteLine("Сумма натуральных элементов в промежутке от " + NumberM + " до " + NumberN + " равна " + res);
 }
 
 int GetSumNutElementsMToN(int M, int N)
 {
-if( N < M) return 0;
-return N + GetSumNutElementsMToN(M , N-1);
+    if (N < M) return 0;
+    return N + GetSumNutElementsMToN(M, N - 1);
 }
 
 
